@@ -10,7 +10,7 @@ with open('./assets/sections_fake_data.json') as json_file:
     batch = db.batch()
 
     for index, section in enumerate(fake_sections):
-        docRef = db.document(f'sellers/{section["seller_id"]}/sections/{section["id"]}')
+        docRef = db.collection(f'sellers/{section["seller_id"]}/sections').document()
 
         delivery_location = {
             'address': section['delivery_location']['address'],
@@ -29,7 +29,7 @@ with open('./assets/sections_fake_data.json') as json_file:
         new_delivery_time = now_time.replace(hour=delivery_time.hour, minute=delivery_time.minute)
 
         batch.set(docRef, {
-            'id': section['id'],
+            'id': docRef.id,
             'title': section['title'],
             'title_zh': section.get('title_zh', None),
             'group_id': section['group_id'],

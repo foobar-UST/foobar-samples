@@ -6,5 +6,7 @@ load_dotenv()
 
 # Intialize admin sdk
 _cred = credentials.Certificate('./serviceAccount.json')
-admin = firebase_admin.initialize_app(_cred)
+admin = firebase_admin.initialize_app(_cred, {
+    'databaseURL': 'https://foobar-group-delivery-app.firebaseio.com'
+})
 db = firestore.client()
