@@ -6,6 +6,7 @@ Restaurants data is collected from [New Catering Service](https://cso.ust.hk/cat
 
 ## Install Dependencies
 ```console
+source ./env/bin/activate
 pip install -r requirements.txt
 ```
 

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Initialize admin sdk
+# Intialize admin sdk
 _cred = credentials.Certificate('./serviceAccount.json')
 admin = firebase_admin.initialize_app(_cred, {
     'databaseURL': 'https://foobar-group-delivery-app.firebaseio.com'
