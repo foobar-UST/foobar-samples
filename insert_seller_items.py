@@ -6,7 +6,7 @@ def chunks(lst, n):
         yield lst[i:i + n]
 
 # Insert into 'items'
-with open('./assets/seller_items_fake_data.json') as json_file:
+with open('./assets/seller_items_extra_fake_data_cambo.json') as json_file:
     fake_items = json.load(json_file)
 
     # Split into multiple batches due to firestore insert limit.

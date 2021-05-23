@@ -5,7 +5,7 @@ from firebase_admin import firestore
 from config import db
 
 # Insert into 'sections'
-with open('./assets/sections_fake_data.json') as json_file:
+with open('./assets/seller_sections_fake_data_foobarify.json') as json_file:
     fake_sections = json.load(json_file)
     batch = db.batch()
 

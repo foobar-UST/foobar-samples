@@ -2,7 +2,7 @@ import json
 from config import db
 
 # Insert into 'catalogs'
-with open('./assets/seller_catalogs_fake_data.json') as json_file:
+with open('./assets/seller_catalogs_extra_fake_data_cambo.json') as json_file:
     fake_catalogs = json.load(json_file)
     batch = db.batch()
 
